@@ -62,18 +62,18 @@
         <form class="col s12" onsubmit="return sendMail(this);" method="POST">
         <div class="row">
           <div class="input-field col s12"> <i class="material-icons prefix">account_circle</i>
-            <input id="icon_prefix" type="text" name="icon_prefix" class="validate" required>
+            <input id="icon_prefix" type="text" name="from_name" class="validate" required>
             <label for="icon_prefix">Your Name</label>
           </div>
         </div>
             <div class="input-field col s12"> <i class="material-icons prefix">computer</i>
-          <input id="icon_computer" type="text" name="icon_computer" class="validate" required>
+          <input id="icon_computer" type="text" name="from_email" class="validate" required>
           <label for="icon_computer">E-mail Address</label>
         </div>
 
             <div class="row">
           <div class="input-field col s12"> <i class="material-icons prefix">local_phone</i>
-            <input id="icon_phone" type="text" name="icon_phone" class="validate" required>
+            <input id="icon_phone" type="text" name="telephone" class="validate" required>
             <label for="icon_phone">Contact Telephone Number</label>
           </div>
         </div>
@@ -117,7 +117,7 @@
 
       <div class="row">
         <div class="input-field col s12"><i class="material-icons prefix">create</i>
-          <textarea id="textarea1" name="textarea1" class="materialize-textarea"></textarea>
+          <textarea id="textarea1" name="message" class="materialize-textarea"></textarea>
           <label for="textarea1">Message</label>
         </div>
 			</div>
@@ -148,12 +148,8 @@
 
 </footer>
 </div>
-
-<!-- jQuery before materialize.js -->
-		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
  <!--JavaScript at end of body for optimized loading-->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+      <script type="text/javascript" src="assets/js/materialize.min.js"></script>
 
 
 <!--mobile navbar collapse-->
