@@ -4,6 +4,21 @@ body {
     font-style: normal;
     font-size: large;
 }
+
+.ladies {
+    background-image: url(../images/ladies.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 31vw;
+}
+
+.logo {
+    position: absolute;
+    bottom: 0;
+    right: 1vw;
+    z-index: 1;
+}
+
 .nav-bar {
     background-color: #1fbeca;
     height: 100px;

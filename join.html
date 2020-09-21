@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Welcome to Ladies Circle</title>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
  <!--Font import-->
   <style>
   @import url("https://use.typekit.net/wyb2fja.css");
@@ -13,7 +15,7 @@
 <!--Import Google Icon Font-->
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <!--Import materialize.css-->
-<link type="text/css" rel="stylesheet" href="assets/css/materialize.min.css/"  media="screen,projection"/>
+<!--<link type="text/css" rel="stylesheet" href="assets/css/materialize.min.css/"  media="screen,projection"/>-->
 
 <!--Let browser know website is optimized for mobile-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -23,6 +25,14 @@
 
 <!--Custom CSS -->
 <link href="assets/css/styles.css" rel="stylesheet" type="text/css">
+
+    <!--Emailjs-->
+    <script type="text/javascript"src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init("user_2HpQKsDijwiP6PmQ5h1sY");
+        })();
+    </script>
 
 </head>
 <body>
@@ -58,7 +68,6 @@
         possible. Otherwise see the relevant email addresses below</p>
 </div>
      <div class="container form_frame">
-
         <form class="col s12" onsubmit="return sendMail(this);" method="POST">
         <div class="row">
           <div class="input-field col s12"> <i class="material-icons prefix">account_circle</i>
@@ -103,13 +112,13 @@
                 <div class="input-field col s12"><i class="material-icons prefix">question_answer</i>
                     <select>
                         <option value="" disabled selected>Choose your option</option>
-                        <option value="Friend">Friend</option>
-                        <option value="Social Media">Social Media</option>
-                        <option value="Circler">Circler Magazine</option>
-                        <option value="Other paper">Other newspaper or magazine</option>
-                        <option value="Event">Event</option>
-                        <option value="Search Engine">Search Engine</option>
-                        <option value="Other">Other</option>
+                        <option value="friend">Friend</option>
+                        <option value="social_media">Social Media</option>
+                        <option value="circler">Circler Magazine</option>
+                        <option value="other_paper">Other newspaper or magazine</option>
+                        <option value="event">Event</option>
+                        <option value="search_engine">Search Engine</option>
+                        <option value="other">Other</option>
                     </select>
                     <label>How did you hear about us?</label>
                 </div>
@@ -124,7 +133,7 @@
 
       <button class="btn waves-effect waves-light btn_sm" type="submit" name="action">Submit </button>
 	</form>
-    </div>
+     </div>
 
 </main>
 
@@ -148,24 +157,22 @@
 
 </footer>
 </div>
+<!-- jQuery before materialize.js -->
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+ <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
  <!--JavaScript at end of body for optimized loading-->
-      <script type="text/javascript" src="assets/js/materialize.min.js"></script>
+     <!-- <script type="text/javascript" src="assets/js/materialize.min.js"></script>-->
 
+<!-- Emailjs script-->
+<script src="assets/sendEmail.js"></script>
 
-<!--mobile navbar collapse-->
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-    var elems = document.querySelectorAll('.sidenav');
-    var instances = M.Sidenav.init(elems, options);
-  });
-
-  <!-- document.addEventListener('DOMContentLoaded', function() {
-    var elems = document.querySelectorAll('select');
-    var instances = M.FormSelect.init(elems, options);
-  });-->
-$(document).ready(function(){
-    $('select').formSelect();
-  });
+<!--form select and sidenav-->
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('select').formSelect();
+        $('.sidenav').sidenav();
+    });
 </script>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -177,5 +184,6 @@ $(document).ready(function(){
 
   gtag('config', 'UA-174184806-1');
 </script>
+
 </body>
 </html>
